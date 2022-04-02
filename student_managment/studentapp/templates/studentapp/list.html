@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>List of student</title>
+</head>
+<body>
+  <h1 style="text-align:center; font-family:courier">List of available student</h1>
+
+    {% for x in data %}
+        <h3><a href="">{{x.name}}</a></h3>
+    {% endfor %}
+
+</body>
+</html>
