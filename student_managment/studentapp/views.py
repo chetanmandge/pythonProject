@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from studentapp.forms import add_student
-from student_managment import studentapp
+from studentapp.models import student
 # Create your views here.
 def welcome(request):
     return render(request,"studentapp/index.html")
@@ -17,5 +17,5 @@ def add_student_view(request):
    
    
 def list_student_view(request):
-    data= studentapp.objects.all()
+    data= student.objects.all()
     return render(request,'studentapp/list.html',{'data':data})
